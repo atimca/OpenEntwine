@@ -22,7 +22,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Combine
+import OpenCombine
 
 extension Publisher {
     /// Returns a publisher as a class instance that replays previous values to new subscribers

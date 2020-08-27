@@ -34,7 +34,7 @@ The operators can then be used as part of your usual publisher chain declaration
 
 ```swift
 
-import Combine
+import OpenCombine
 import Entwine
 
 class MyClass {

@@ -23,7 +23,7 @@
 //  THE SOFTWARE.
 
 import XCTest
-import Combine
+import OpenCombine
 
 @testable import Entwine
 @testable import EntwineTest

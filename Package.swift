@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Entwine",
     platforms: [
-        .macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6)
+        .macOS(.v10_15), .iOS(.v12), .tvOS(.v12), .watchOS(.v6)
     ],
     products: [
         .library(
@@ -16,18 +16,38 @@ let package = Package(
             name: "EntwineTest",
             targets: ["EntwineTest"]),
     ],
+    dependencies: [
+        .package(name: "OpenCombine", url: "https://github.com/OpenCombine/OpenCombine.git", from: "0.10.0")
+    ],
     targets: [
         .target(
             name: "Entwine",
-            dependencies: []),
+            dependencies: [
+                .product(name: "OpenCombine", package: "OpenCombine"),
+                .product(name: "OpenCombineDispatch", package: "OpenCombine")
+            ]),
         .target(
             name: "EntwineTest",
-            dependencies: ["Entwine"]),
+            dependencies: [
+                "Entwine",
+                .product(name: "OpenCombine", package: "OpenCombine"),
+                .product(name: "OpenCombineDispatch", package: "OpenCombine")
+            ]),
         .testTarget(
             name: "EntwineTests",
-            dependencies: ["Entwine", "EntwineTest"]),
+            dependencies: [
+                "Entwine",
+                "EntwineTest",
+                .product(name: "OpenCombine", package: "OpenCombine"),
+                .product(name: "OpenCombineDispatch", package: "OpenCombine")
+            ]),
         .testTarget(
             name: "EntwineTestTests",
-            dependencies: ["EntwineTest"]),
+            dependencies: [
+                "EntwineTest",
+                .product(name: "OpenCombine", package: "OpenCombine"),
+                .product(name: "OpenCombineDispatch", package: "OpenCombine")
+            ]),
     ]
 )
+

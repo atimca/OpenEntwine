@@ -22,7 +22,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Combine
+import OpenCombine
 
 @available(*, deprecated, message: "Replace with mutable Set<AnyCancellable>")
 public typealias CancellationBag = Set<AnyCancellable>

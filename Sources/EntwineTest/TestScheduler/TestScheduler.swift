@@ -27,7 +27,7 @@
 //  https://github.com/ReactiveX/RxSwift
 
 import Entwine
-import Combine
+import OpenCombine
 
 // MARK: - TestScheduler definition
 

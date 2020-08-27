@@ -22,7 +22,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Combine
+import OpenCombine
 
 /// An object that notifies of its deallocation via a publisher sequence
 public final class DeallocToken {

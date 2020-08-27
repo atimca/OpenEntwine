@@ -22,7 +22,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Combine
+import OpenCombine
 
 /// A container for cancellables that will be cancelled when the bag is deallocated or cancelled itself
 @available(*, deprecated, message: "Replace with mutable Set<AnyCancellable>")

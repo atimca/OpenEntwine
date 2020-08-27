@@ -74,7 +74,7 @@ One, `createAbsoluteTestablePublisher(_:)`, schedules events at exactly the time
 The other, `createRelativeTestablePublisher(_:)`, schedules events at the time specified _plus_ the time the publisher was subscribed to. So an event scheduled at `100` with a subscription at `200` means the event will fire at `300`.
 
 ```swift
-import Combine
+import OpenCombine
 import EntwineTest
 
 // we'll set the schedulers clock a little forward – at 200
@@ -116,7 +116,7 @@ The final piece in the jigsaw is the `TestableSubscriber`. Its role is to gather
 Once we subscribe to a publisher, `TestableSubscriber` records all the events with their time of arrival and makes them available on its `.sequence` property ready for us to compare against some expected output. It also records the time the subscription began, as well as its completion (should it end). 
 
 ```swift
-import Combine
+import OpenCombine
 import EntwineTest
 
 let scheduler = TestScheduler()

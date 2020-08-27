@@ -22,7 +22,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Combine
+import OpenCombine
 
 /// A subject that maintains a buffer of its latest values for replay to new subscribers and passes
 /// through subsequent elements and completion
